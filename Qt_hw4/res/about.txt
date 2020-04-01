@@ -1,0 +1,6 @@
+/*Qt_hw4.pro
+* Home work 
+*
+*Chernenko Konstantin
+*in Qt Creator
+*/
