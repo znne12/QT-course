@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include <QMessageBox>
-#include <QTextDocument>
+#include <QCheckBox>
 #include <QTranslator>
 #include "filework.h"
 
@@ -48,6 +48,8 @@ private slots:
 
     void on_action_exit_triggered();
 
+    void on_styleCheckBox_clicked();
+
 private:
     Ui::MainWindow *ui;
     QVector<std::pair <QString, quint32>> undoRedoStack;
@@ -62,5 +64,6 @@ private:
     QTranslator translator;
     bool needToSaveMessage();
     void newStack();
+    QCheckBox *styleCheckBox;
 };
 #endif // MAINWINDOW_H

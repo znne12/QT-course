@@ -129,7 +129,7 @@ bool fileWork::saveFile(QString s, QString textToSave, QString authorStr)
                     }
                 }
             }
-            symbamount.clear(); // больше не понадобится
+            symbamount.clear();
             //**********************************************
             QByteArray b = usedS.toUtf8();
             amount = b.length();

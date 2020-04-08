@@ -8,6 +8,9 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    styleCheckBox = new QCheckBox(tr("Ночной режим"), this);
+    styleCheckBox->setGeometry(frameGeometry().width() - styleCheckBox->sizeHint().width(), styleCheckBox->sizeHint().height() + 10,
+                               styleCheckBox->sizeHint().width(), styleCheckBox->sizeHint().height());
     isSaved = true;
 
     undoRedoStack.push_front({ui->plainTextEdit->toPlainText(), ui->plainTextEdit->textCursor().position()});
@@ -27,9 +30,10 @@ MainWindow::MainWindow(QWidget *parent)
                      SLOT(slot_plainTextEdit_insertOpenedText(QString)));
     connect(file, SIGNAL(returnAuthor(QString)), this,
                      SLOT(slot_authorEdit_insertAuthor(QString)));
+    connect(styleCheckBox, SIGNAL(clicked()), this,
+                     SLOT(on_styleCheckBox_clicked()));
 
     translator.load(":/Qt_hw4_ru_RU.qm");
-
 }
 
 MainWindow::~MainWindow()
@@ -208,4 +212,21 @@ void MainWindow::on_action_exit_triggered()
         on_action_save_triggered();
     }
     qApp->exit();
+}
+
+void MainWindow::on_styleCheckBox_clicked()
+{
+    if (styleCheckBox->isChecked())  {
+        qApp->setStyleSheet("QMenu{color: white; background-color: grey}"
+                            "QMenu::item:selected {background: #a8a8a8;}"
+                            "QMainWindow{background-color:grey}"
+                            "QCheckBox, QPlainTextEdit, QLabel, QLineEdit{color: white; background-color: grey}"
+                            "QPlainTextEdit::cursor{color: red}"
+                            "QMenuBar{background: transparent;border-radius: 4px;}"
+                            "QMenuBar::item:selected {background: #a8a8a8;}"
+                            "QToolBar::item:selected {background: #a8a8a8;}");
+    } else {
+        qApp->setStyleSheet("");
+
+    }
 }
