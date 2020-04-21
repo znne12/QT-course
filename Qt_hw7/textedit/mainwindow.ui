@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>622</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLineEdit" name="authorEdit">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>520</y>
+      <width>171</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="authorLabel">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>525</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Автор:</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <widget class="QMenu" name="menu_2">
+     <property name="title">
+      <string>Открыть</string>
+     </property>
+     <addaction name="action_open"/>
+     <addaction name="action_openReadOnly"/>
+    </widget>
+    <addaction name="action_new"/>
+    <addaction name="menu_2"/>
+    <addaction name="action_save"/>
+    <addaction name="actionPrint"/>
+    <addaction name="action_exit"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>Правка</string>
+    </property>
+    <addaction name="action_undo"/>
+    <addaction name="action_redo"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>Справка</string>
+    </property>
+    <widget class="QMenu" name="menu_5">
+     <property name="title">
+      <string>Язык</string>
+     </property>
+     <addaction name="action_2"/>
+     <addaction name="action_3"/>
+    </widget>
+    <addaction name="action_about"/>
+    <addaction name="menu_5"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_new"/>
+   <addaction name="action_open"/>
+   <addaction name="action_save"/>
+   <addaction name="action_undo"/>
+   <addaction name="action_redo"/>
+   <addaction name="action_about"/>
+  </widget>
+  <action name="action_new">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/icons/New_icon.png</normaloff>:/icons/icons/New_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Новый</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="action_open">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/icons/Open_icon.png</normaloff>:/icons/icons/Open_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Открыть ...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_openReadOnly">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/icons/Open_icon.png</normaloff>:/icons/icons/Open_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Открыть для чтения</string>
+   </property>
+   <property name="toolTip">
+    <string>Открыть для чтения</string>
+   </property>
+  </action>
+  <action name="action_save">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/icons/Save_icon.png</normaloff>:/icons/icons/Save_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="action_exit">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="action_undo">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/icons/Undo_icon.png</normaloff>:/icons/icons/Undo_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Отменить</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="action_redo">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/icons/Redo_icon.png</normaloff>:/icons/icons/Redo_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Восстановить</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="action_about">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/icons/Help_icon.png</normaloff>:/icons/icons/Help_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>О программе</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>Русский</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>Английский</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="text">
+    <string>Печать</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
