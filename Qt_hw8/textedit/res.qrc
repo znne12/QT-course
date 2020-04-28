@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icons/Cancel_icon.png</file>
+        <file>icons/Help_icon.png</file>
+        <file>icons/New_icon.png</file>
+        <file>icons/Open_icon.png</file>
+        <file>icons/Properties_icon.png</file>
+        <file>icons/Redo_icon.png</file>
+        <file>icons/Save_icon.png</file>
+        <file>icons/Settings_icon.png</file>
+        <file>icons/Undo_icon.png</file>
+        <file>icons/Text-align--center.png</file>
+        <file>icons/Text-align-left.png</file>
+        <file>icons/Text-align-right.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>res/about.txt</file>
+        <file>Qt_hw4_ru_RU.qm</file>
+    </qresource>
+</RCC>
