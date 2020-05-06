@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Element.qml</file>
+        <file>NewData.qml</file>
+        <file>Add.qml</file>
+    </qresource>
+</RCC>
